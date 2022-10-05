@@ -1,0 +1,17 @@
+<h1>List Senders</h1>
+<table>
+    <thead>
+        <th> # </th>
+        <th> Sender ID </th>
+        <th> Sender Name </th>
+        <th> Sender Parcels </th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let sender of senders; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{sender._id}}</td>
+            <td>{{sender.name}}</td>
+            <td>{{sender.parcel.join(', ')}}</td>
+        </tr>
+    </tbody>
+</table>
